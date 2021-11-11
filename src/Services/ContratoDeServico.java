@@ -20,7 +20,7 @@ public class ContratoDeServico {
         for (int i=1;i<=mes;i++){
 
             Date addMes= addMes(contrato.getDataInicialContrato(),i);
-            double jm=sdp.jurosMesal(parcela,i);
+            double jm=parcela + sdp.jurosMesal(parcela,i);
             double jp=jm+ sdp.pagamentoMensal(parcela);
             contrato.addPrestacao(new Prestacao(addMes,jp));
         }
