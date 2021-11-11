@@ -22,15 +22,11 @@ public class ContratoDeServico {
             Date addMes= addMes(contrato.getDataInicialContrato(),i);
             double jm=sdp.jurosMesal(parcela,i);
             double jp=jm+ sdp.pagamentoMensal(parcela);
-
-
-
-
+            contrato.addPrestacao(new Prestacao(addMes,jp));
         }
     }
 
     private Date addMes(Date dataInicialContrato, int i) {
-
         Calendar cal= Calendar.getInstance();
         cal.setTime(dataInicialContrato);
         cal.add(Calendar.MONTH,i);

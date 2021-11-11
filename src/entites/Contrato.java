@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 public class Contrato {
 
     private Integer numeroContrato;
@@ -47,12 +48,10 @@ public class Contrato {
     }
 
     public void addPrestacao(Prestacao prestacao) {
-       prestacao.add(prestacao);
+       this.prestacao.add(prestacao);
     }
 
     public void removePrestacao(Prestacao prestacao) {
-        prestacao.remove(prestacao);
+       this.prestacao.add(prestacao);
     }
-
-
 }
